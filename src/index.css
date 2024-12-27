@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Prata&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  /* font-style: normal; */
+}
+
+a.active hr {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -webkit-scrollbar: none;
+}
+
+@media (max-width: 640px) {
+  a.active {
+    background-color: #1b1b1b;
+    color: #f9f9f9;
+  }
+}
+
+/* ------ */
+
+.transition2 {
+  transition: all 0.3s ease-in-out;
+}
+
+.test {
+  background-color: plum;
+}
+
+/* CUSTOM_UTIITIES */
+
+@layer utilities {
+  .btn-hover {
+    @apply hover:bg-transparent hover:border hover:border-zinc-600 hover:transition-all;
+  }
+
+  .link-hover {
+    @apply hover:text-blue-400 transition-all duration-150 ease-in hover:-translate-y-1 cursor-pointer;
+  }
+
+  .card-hover {
+    @apply hover:bg-zinc-800 transition-all hover:text-zinc-100 duration-500;
+  }
+
+  .centered-row {
+    @apply flex items-center;
+  }
+
+  .black-text {
+    @apply text-zinc-500/90;
+  }
+
+  .line-bottom {
+    @apply border-b border-b-zinc-500/40;
+  }
+
+  .sticky_header {
+    @apply w-full h-[80px] sticky top-0 left-0 z-[999] backdrop-blur shadow;
+  }
+
+  .center-item {
+    @apply centered-row justify-center;
+  }
+
+  .link-hover {
+    @apply hover:font-bold hover:text-zinc-800 transition-all duration-300 ease-in-out;
+  }
+}
